@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Developers | Mjerg</title>
+<meta name="description" content="Who builds Mjerg, how to reach them, and where to start if you want to build a bot for Osmium yourself.">
+<link rel="icon" href="assets/mjerg-mark-32.png" sizes="32x32">
+<link rel="icon" href="assets/mjerg-icon-256.png" sizes="256x256">
+<link rel="apple-touch-icon" href="assets/mjerg-icon-512.png">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-head">
+  <div class="wrap head-inner">
+    <a class="brand" href="index.html">
+      <img src="assets/mjerg-mark-transparent-white-1024.png" alt="" width="26" height="26">
+      <span>Mjerg</span>
+    </a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav class="nav" id="nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="commands.html">Commands</a>
+      <a href="info.html">Info</a>
+      <a href="help.html">Help</a>
+      <a href="developers.html">Developers</a>
+      <a class="nav-cta" href="donate.html">Donate</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap section">
+
+  <p class="eyebrow">Developers</p>
+  <h1>Who builds it.</h1>
+  <p class="lede">
+    Mjerg is one person's project. That is the whole team, and it is not a
+    modest way of saying "a small team".
+  </p>
+
+  <div class="people" style="margin-top: 34px;">
+
+    <div class="person">
+      <div class="person-av">
+        <img src="assets/mjerg-avatar-circle-512.png" alt="" width="52" height="52">
+      </div>
+      <div>
+        <h3>Ruby</h3>
+        <p class="role">Aubergine-UX &middot; everything</p>
+        <p>Writes the bot, runs the server, answers the bug reports, drew the
+        shield. Mjerg started in their own community in July 2026 and still lives
+        there, which is why the annoying bugs get fixed first.</p>
+        <p class="links">
+          <a href="#" data-link="email">Email</a>
+          <a href="#" data-link="support">Support community</a>
+        </p>
+      </div>
+    </div>
+
+    <!-- Second contributor slot. Copy the block above, swap the name, role and
+         blurb. The avatar falls back to the mark if there is no image yet. -->
+    <div class="person">
+      <div class="person-av">
+        <img src="assets/mjerg-mark-transparent-white-1024.png" alt="" width="34" height="34">
+      </div>
+      <div>
+        <h3>Everyone who reports things</h3>
+        <p class="role">Not officially a job</p>
+        <p>A decent share of what Mjerg does started as someone saying "it would
+        be good if it could..." in the support community. Bug reports with the
+        command and rough timestamp attached are worth more than they sound.</p>
+        <p class="links">
+          <a href="#" data-link="support">Join in</a>
+        </p>
+      </div>
+    </div>
+
+  </div>
+
+  <hr>
+
+  <h2>Building your own Osmium bot</h2>
+  <p class="muted" style="max-width: 62ch;">
+    Mjerg is not open source, so there is nothing to fork here. Osmium's API is
+    public and unrestricted though, with no approval process and no gated
+    endpoints, so building your own is open to anyone. These are the
+    places to start:
+  </p>
+
+  <div class="grid grid--3" style="margin-top: 22px;">
+    <div class="panel">
+      <h3>API docs</h3>
+      <p class="muted small">Osmium's own reference for the gateway and REST API.</p>
+      <p class="small"><a href="#" data-link="osmium">osmium.chat/docs/api</a></p>
+    </div>
+    <div class="panel">
+      <h3>sdk-js</h3>
+      <p class="muted small">The official JavaScript and TypeScript SDK. What Mjerg is built on.</p>
+      <p class="small"><a href="https://github.com/osmiumchat" target="_blank" rel="noopener">github.com/osmiumchat</a></p>
+    </div>
+    <div class="panel">
+      <h3>bot-example-js</h3>
+      <p class="muted small">A working bot in about thirty lines. Start here rather than from scratch.</p>
+      <p class="small"><a href="https://github.com/osmiumchat" target="_blank" rel="noopener">github.com/osmiumchat</a></p>
+    </div>
+  </div>
+
+  <div class="note" style="margin-top: 30px;">
+    <p>Building something and stuck on the Osmium side of it? Ask in Osmium's own
+    developer community rather than Mjerg's. Faster answers, and more people who
+    have hit the same thing.</p>
+  </div>
+
+</main>
+
+<footer class="site-foot">
+  <div class="wrap foot-grid">
+    <div class="foot-about">
+      <a class="brand" href="index.html">
+        <img src="assets/mjerg-mark-transparent-white-1024.png" alt="" width="22" height="22">
+        <span>Mjerg</span>
+      </a>
+      <p>A moderation, levelling and utility bot for Osmium communities. Built and run by one person, in the community it was written for.</p>
+    </div>
+    <div>
+      <h4>Bot</h4>
+      <ul>
+        <li><a href="commands.html">Commands</a></li>
+        <li><a href="help.html">Help &amp; setup</a></li>
+        <li><a href="info.html">Info</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Project</h4>
+      <ul>
+        <li><a href="about.html">About</a></li>
+        <li><a href="developers.html">Developers</a></li>
+        <li><a href="donate.html">Donate</a></li>
+        <li><a href="#" data-link="source">Source</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Elsewhere</h4>
+      <ul>
+        <li><a href="#" data-link="support">Support community</a></li>
+        <li><a href="#" data-link="osmium">Osmium API docs</a></li>
+        <li><a href="#" data-link="email">Email</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap foot-bottom">
+    <span>&copy; <span id="year">2026</span> Mjerg. Not affiliated with Osmium.</span>
+  </div>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/site.js"></script>
+</body>
+</html>

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mjerg, a bot for Osmium communities</title>
+<meta name="description" content="Mjerg is a moderation, levelling and utility bot for Osmium, with live channel auto-translation. 93 commands, no paid tier.">
+<link rel="icon" href="assets/mjerg-mark-32.png" sizes="32x32">
+<link rel="icon" href="assets/mjerg-icon-256.png" sizes="256x256">
+<link rel="apple-touch-icon" href="assets/mjerg-icon-512.png">
+<meta property="og:title" content="Mjerg, a bot for Osmium communities">
+<meta property="og:description" content="Moderation, levelling, auto-translation and utilities for Osmium. 93 commands, no paid tier.">
+<meta property="og:image" content="assets/mjerg-wordmark-dark-900x220.png">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-head">
+  <div class="wrap head-inner">
+    <a class="brand" href="index.html">
+      <img src="assets/mjerg-mark-transparent-white-1024.png" alt="" width="26" height="26">
+      <span>Mjerg</span>
+    </a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav class="nav" id="nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="commands.html">Commands</a>
+      <a href="info.html">Info</a>
+      <a href="help.html">Help</a>
+      <a href="developers.html">Developers</a>
+      <a class="nav-cta" href="donate.html">Donate</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero wrap">
+    <img class="hero-mark" src="assets/mjerg-mark-transparent-white-1024.png" alt="Mjerg" width="64" height="64">
+    <h1>One bot, and then you can stop looking.</h1>
+    <p class="lede">
+      Moderation, levelling, an economy, games, live channel auto-translation
+      and a pile of small utilities for Osmium communities. Ninety-three
+      commands, nothing behind a paywall, and no dashboard to sign into. You
+      configure it from chat, like everything else.
+    </p>
+    <div class="btn-row">
+      <a class="btn btn--brand" href="help.html#add">How to add Mjerg</a>
+      <a class="btn" href="commands.html">Browse all 93 commands</a>
+    </div>
+    <p class="hero-note">Free. Version <span data-cfg="version">26.92</span>.</p>
+  </section>
+
+  <section class="wrap section--tight">
+    <div class="stats" id="stats">
+      <!-- filled from js/config.js -->
+    </div>
+  </section>
+
+  <!-- adding it: no invite URL, it's done from inside the app -->
+  <section class="wrap section" id="add">
+    <p class="eyebrow">Getting it</p>
+    <h2>Added from inside Osmium</h2>
+    <p class="muted" style="max-width: 60ch;">
+      There's no invite link to click. Osmium handles it in the app, which is
+      three steps and takes about ten seconds:
+    </p>
+    <ol class="steps" style="margin-top: 22px;">
+      <li>
+        <h3>Open Osmium</h3>
+        <p>Desktop, web or mobile, all the same.</p>
+      </li>
+      <li>
+        <h3>Click on Mjerg</h3>
+        <p>Search for it, or click the name anywhere you see the bot posting.</p>
+      </li>
+      <li>
+        <h3>Hit "Add to Chat"</h3>
+        <p>Pick the community, confirm the permissions, done. You'll need
+        <b>Manage community</b> there to be allowed to add it.</p>
+      </li>
+    </ol>
+    <p style="margin-top: 22px;"><a href="help.html">Full setup guide, including what to configure first &rarr;</a></p>
+  </section>
+
+  <section class="wrap section">
+    <p class="eyebrow">What's in it</p>
+
+    <div class="feature">
+      <div>
+        <h2>Moderation that keeps a record</h2>
+        <p class="muted">
+          Warnings, bans and purges all leave a trail you can look up later.
+          Automod handles the boring half, spam and invites and mass mentions, before
+          anyone has to type a command. And <code class="js-prefix">!snipe</code>
+          exists for when someone deletes something a half-second too late.
+        </p>
+      </div>
+      <ul>
+        <li>19 commands</li>
+        <li><code class="js-prefix">!warn</code>, <code class="js-prefix">!warnings</code>, <code class="js-prefix">!modlog</code></li>
+        <li>Automod rules you toggle individually</li>
+        <li>Snipe and editsnipe</li>
+      </ul>
+    </div>
+
+    <div class="feature feature--flag">
+      <div>
+        <p class="eyebrow">The one people stay for</p>
+        <h2>Auto-translation, running in the background</h2>
+        <p class="muted">
+          Point Mjerg at a channel and it translates messages in and out of any
+          language as people post. Someone writes in Portuguese, everyone else
+          reads it in their own language, and the replies go back the other way.
+          No copying text into a translator, no command to remember, nobody
+          switching to English out of politeness.
+        </p>
+        <p class="muted">
+          <code class="js-prefix">!autotranslate #channel es</code> turns it on
+          for a channel and the same command turns it off.
+          <code class="js-prefix">!translate</code> covers the one-off case.
+        </p>
+      </div>
+      <ul>
+        <li>Any language, both directions</li>
+        <li>Set per channel, not per community</li>
+        <li>Works on ordinary messages, no tagging</li>
+        <li>Off again with one command</li>
+      </ul>
+    </div>
+
+    <div class="feature">
+      <div>
+        <h2>Levelling and an economy people bother with</h2>
+        <p class="muted">
+          XP from talking, roles that unlock at a level you pick, a leaderboard.
+          Coins from <code class="js-prefix">!work</code>, spent in a shop you
+          stock yourself, lost at <code class="js-prefix">!gamble</code> shortly
+          after. Both work out of the box and both can be turned off.
+        </p>
+      </div>
+      <ul>
+        <li>5 levelling commands, 24 fun ones</li>
+        <li>Level roles via <code class="js-prefix">!levelrole</code></li>
+        <li>Shop, balances, transfers</li>
+        <li>Wordle, hangman, trivia, counting</li>
+      </ul>
+    </div>
+
+    <div class="feature">
+      <div>
+        <h2>Utilities you'd otherwise need four bots for</h2>
+        <p class="muted">
+          Reminders, weather, a calculator, unit conversion, dictionary and
+          Wikipedia lookups, tags, AFK, encoders and hashes.
+          None of them are impressive on their own. Together they are the reason
+          nobody has to leave the app to get something done.
+        </p>
+      </div>
+      <ul>
+        <li>20 utility commands</li>
+        <li><code class="js-prefix">!remind</code>, <code class="js-prefix">!translate</code>, <code class="js-prefix">!weather</code></li>
+        <li>Per-community tags</li>
+        <li>Per-member AFK notes</li>
+      </ul>
+    </div>
+
+    <div class="feature">
+      <div>
+        <h2>Setup that stays in chat</h2>
+        <p class="muted">
+          Nine setup commands cover the whole thing: log and welcome channels,
+          auto-roles, reaction roles, sticky messages, custom triggers.
+          <code class="js-prefix">!config</code> shows you every setting at once,
+          which beats hunting through a web panel for the one you changed.
+        </p>
+      </div>
+      <ul>
+        <li>9 setup commands</li>
+        <li>Reaction roles and auto-roles</li>
+        <li>Sticky messages and triggers</li>
+        <li>Everything visible in <code class="js-prefix">!config</code></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="wrap section--tight">
+    <div class="grid grid--3">
+      <div class="panel">
+        <h3>Just set it up?</h3>
+        <p class="muted small">The four settings worth doing on day one, and the FAQ.</p>
+        <p><a href="help.html">Help &amp; setup &rarr;</a></p>
+      </div>
+      <div class="panel">
+        <h3>Want the specifics?</h3>
+        <p class="muted small">Hosting, permissions, what Mjerg stores and for how long.</p>
+        <p><a href="info.html">Technical info &rarr;</a></p>
+      </div>
+      <div class="panel">
+        <h3>Who runs it?</h3>
+        <p class="muted small">The people behind it, and how to actually reach them.</p>
+        <p><a href="developers.html">Developers &rarr;</a></p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-foot">
+  <div class="wrap foot-grid">
+    <div class="foot-about">
+      <a class="brand" href="index.html">
+        <img src="assets/mjerg-mark-transparent-white-1024.png" alt="" width="22" height="22">
+        <span>Mjerg</span>
+      </a>
+      <p>A moderation, levelling and utility bot for Osmium communities. Built and run by one person, in the community it was written for.</p>
+    </div>
+    <div>
+      <h4>Bot</h4>
+      <ul>
+        <li><a href="commands.html">Commands</a></li>
+        <li><a href="help.html">Help &amp; setup</a></li>
+        <li><a href="info.html">Info</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Project</h4>
+      <ul>
+        <li><a href="about.html">About</a></li>
+        <li><a href="developers.html">Developers</a></li>
+        <li><a href="donate.html">Donate</a></li>
+        <li><a href="#" data-link="source">Source</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Elsewhere</h4>
+      <ul>
+        <li><a href="#" data-link="support">Support community</a></li>
+        <li><a href="#" data-link="osmium">Osmium API docs</a></li>
+        <li><a href="#" data-link="email">Email</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap foot-bottom">
+    <span>&copy; <span id="year">2026</span> Mjerg. Not affiliated with Osmium.</span>
+  </div>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/site.js"></script>
+</body>
+</html>

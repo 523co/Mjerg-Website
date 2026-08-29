@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Help &amp; setup | Mjerg</title>
+<meta name="description" content="How to add Mjerg from the Osmium app, what to configure first, and answers to the questions that come up most.">
+<link rel="icon" href="assets/mjerg-mark-32.png" sizes="32x32">
+<link rel="icon" href="assets/mjerg-icon-256.png" sizes="256x256">
+<link rel="apple-touch-icon" href="assets/mjerg-icon-512.png">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-head">
+  <div class="wrap head-inner">
+    <a class="brand" href="index.html">
+      <img src="assets/mjerg-mark-transparent-white-1024.png" alt="" width="26" height="26">
+      <span>Mjerg</span>
+    </a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav class="nav" id="nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="commands.html">Commands</a>
+      <a href="info.html">Info</a>
+      <a href="help.html">Help</a>
+      <a href="developers.html">Developers</a>
+      <a class="nav-cta" href="donate.html">Donate</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap section">
+
+  <p class="eyebrow">Help</p>
+  <h1>Setup, start to finish.</h1>
+  <p class="lede">
+    Adding Mjerg takes about ten seconds. Getting it set up the way you want
+    takes about five minutes, and you only ever do it once.
+  </p>
+
+  <hr>
+
+  <h2 id="add">Adding Mjerg</h2>
+  <p class="muted" style="max-width: 60ch;">
+    There is no invite link. Osmium handles this inside the app:
+  </p>
+  <ol class="steps" style="margin: 22px 0 10px;">
+    <li>
+      <h3>Open Osmium</h3>
+      <p>Desktop, web or mobile. It's the same flow on all three.</p>
+    </li>
+    <li>
+      <h3>Click on Mjerg</h3>
+      <p>Search for it, or click the bot's name anywhere you've seen it post.
+      That opens its profile.</p>
+    </li>
+    <li>
+      <h3>Hit "Add to Chat"</h3>
+      <p>Choose the community, confirm the permissions, and Mjerg joins.</p>
+    </li>
+  </ol>
+  <div class="note">
+    <p>You need <b>Manage community</b> in the target community to add any bot.
+    If the button doesn't do anything, that's almost always why. Ask whoever
+    owns the community to do it.</p>
+  </div>
+
+  <h2 style="margin-top: 46px;">The four things worth setting first</h2>
+  <p class="muted" style="max-width: 62ch;">
+    Mjerg works immediately with no configuration, but these four make the
+    difference between "a bot is here" and "the bot is useful". All of them need
+    <b>Manage community</b>.
+  </p>
+
+  <ol class="steps" style="margin-top: 24px;">
+    <li>
+      <h3>Point the log channel somewhere</h3>
+      <p><code class="js-prefix">!channel log #mod-log</code>. Without this,
+      moderation actions still happen but nothing gets written down, which
+      defeats most of the point.</p>
+    </li>
+    <li>
+      <h3>Decide who counts as a manager</h3>
+      <p><code class="js-prefix">!managerole @Moderator</code> sets which role
+      is allowed to change Mjerg's settings, separately from Osmium's own
+      permissions.</p>
+    </li>
+    <li>
+      <h3>Turn on the automod rules you want</h3>
+      <p><code class="js-prefix">!automod invites on</code>, and the same for the
+      other rules. They're individually switchable so you can start with one and
+      see how it goes.</p>
+    </li>
+    <li>
+      <h3>Greet people, or don't</h3>
+      <p><code class="js-prefix">!channel welcome #general</code> plus
+      <code class="js-prefix">!autorole</code> if new members should get a role
+      on join.</p>
+    </li>
+  </ol>
+
+  <p class="muted" style="margin-top: 26px;">
+    When you're done, <code class="js-prefix">!config</code> prints every setting
+    for the community on one screen. It's the fastest way to spot the thing you
+    forgot.
+  </p>
+
+  <h2 style="margin-top: 46px;">Common questions</h2>
+  <div class="faq" style="margin-top: 18px;">
+
+    <details>
+      <summary>Mjerg isn't responding to anything</summary>
+      <p>Three things, in order of likelihood. One: the prefix has been changed
+      in this community, so try <code>@Mjerg help</code> instead. Mentioning it
+      always works. Two: Mjerg can't see the channel, check its role has read
+      and send access there. Three: the command was disabled. If none of those
+      apply, <code class="js-prefix">!ping</code> in a channel you know it can
+      see will tell you whether it's alive at all.</p>
+    </details>
+
+    <details>
+      <summary>Can I change the prefix?</summary>
+      <p>Yes, per community. The default is <code data-cfg="prefix">!</code>.
+      Mentioning the bot works regardless of what you set, so you can't lock
+      yourself out.</p>
+    </details>
+
+    <details>
+      <summary>A moderation command says I don't have permission</summary>
+      <p>Mjerg reads permissions from your Osmium roles rather than keeping its
+      own list. <code class="js-prefix">!ban</code> needs Ban members,
+      <code class="js-prefix">!purge</code> needs Manage messages, and so on. The
+      red tags on the <a href="commands.html">commands page</a> show which is
+      which. If you have the permission and it still refuses, Mjerg's own role
+      may sit below the member you're acting on.</p>
+    </details>
+
+    <details>
+      <summary>How do I turn off levelling, or the economy, or the games?</summary>
+      <p>Individually, with <code class="js-prefix">!disable</code> on the
+      commands you don't want, or wholesale by leaving the relevant features
+      unconfigured. Nothing switches itself back on.</p>
+    </details>
+
+    <details>
+      <summary>Someone's XP or balance is wrong</summary>
+      <p><code class="js-prefix">!setxp</code> and
+      <code class="js-prefix">!setcoins</code> both set values directly, and
+      <code class="js-prefix">!resetlevels</code> wipes XP for one member or for
+      everyone. Resets aren't reversible, so double-check the argument before you
+      send it.</p>
+    </details>
+
+    <details>
+      <summary>Does Mjerg read our messages?</summary>
+      <p>It has to see message content to notice commands, count XP, run the
+      counting game and apply automod rules. It doesn't store the text of
+      ordinary messages, and nothing from your community is sold, shared or used
+      for training. The <a href="info.html">info page</a> lists exactly what gets
+      written to disk.</p>
+    </details>
+
+    <details>
+      <summary>Can I run my own copy?</summary>
+      <p>Mjerg isn't open source right now. If you want to build something like
+      it, Osmium's <a href="#" data-link="osmium">API docs</a> and the official
+      <code>bot-example-js</code> repo are a good place to start.</p>
+    </details>
+
+    <details>
+      <summary>Something's broken and none of this covers it</summary>
+      <p>The <a href="#" data-link="support">support community</a> is the fastest
+      route. Bug reports there usually get a look within a day or two. Include
+      the command you ran and roughly when, it makes finding it in the logs much
+      easier.</p>
+    </details>
+
+  </div>
+
+</main>
+
+<footer class="site-foot">
+  <div class="wrap foot-grid">
+    <div class="foot-about">
+      <a class="brand" href="index.html">
+        <img src="assets/mjerg-mark-transparent-white-1024.png" alt="" width="22" height="22">
+        <span>Mjerg</span>
+      </a>
+      <p>A moderation, levelling and utility bot for Osmium communities. Built and run by one person, in the community it was written for.</p>
+    </div>
+    <div>
+      <h4>Bot</h4>
+      <ul>
+        <li><a href="commands.html">Commands</a></li>
+        <li><a href="help.html">Help &amp; setup</a></li>
+        <li><a href="info.html">Info</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Project</h4>
+      <ul>
+        <li><a href="about.html">About</a></li>
+        <li><a href="developers.html">Developers</a></li>
+        <li><a href="donate.html">Donate</a></li>
+        <li><a href="#" data-link="source">Source</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Elsewhere</h4>
+      <ul>
+        <li><a href="#" data-link="support">Support community</a></li>
+        <li><a href="#" data-link="osmium">Osmium API docs</a></li>
+        <li><a href="#" data-link="email">Email</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap foot-bottom">
+    <span>&copy; <span id="year">2026</span> Mjerg. Not affiliated with Osmium.</span>
+  </div>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/site.js"></script>
+</body>
+</html>

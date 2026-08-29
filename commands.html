@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Commands | Mjerg</title>
+<meta name="description" content="All 93 Mjerg commands across info, fun, utility, levelling, moderation, setup and dev. Searchable.">
+<link rel="icon" href="assets/mjerg-mark-32.png" sizes="32x32">
+<link rel="icon" href="assets/mjerg-icon-256.png" sizes="256x256">
+<link rel="apple-touch-icon" href="assets/mjerg-icon-512.png">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-head">
+  <div class="wrap head-inner">
+    <a class="brand" href="index.html">
+      <img src="assets/mjerg-mark-transparent-white-1024.png" alt="" width="26" height="26">
+      <span>Mjerg</span>
+    </a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav class="nav" id="nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="commands.html">Commands</a>
+      <a href="info.html">Info</a>
+      <a href="help.html">Help</a>
+      <a href="developers.html">Developers</a>
+      <a class="nav-cta" href="donate.html">Donate</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap section">
+
+  <p class="eyebrow">Commands</p>
+  <h1>All 93 of them.</h1>
+  <p class="lede">
+    The default prefix is <code data-cfg="prefix">!</code>, changeable per
+    community. Anything marked with a red tag needs that permission. Mjerg reads
+    it from your Osmium roles, there's no separate permission system to learn.
+  </p>
+
+  <div class="cmd-tools" style="margin-top: 28px;">
+    <input class="cmd-search" id="cmd-search" type="search" placeholder="Search commands..."
+           autocomplete="off" spellcheck="false" aria-label="Search commands">
+    <span class="small muted" id="cmd-count">93 commands</span>
+  </div>
+  <div class="chips" id="cmd-chips" style="margin-bottom: 30px;">
+    <!-- built from CATEGORIES in js/commands.js -->
+  </div>
+
+  <div id="cmd-list">
+    <p class="empty">Loading commands. If this doesn't go away, JavaScript is
+    blocked, and the same list is available in chat with
+    <code>!help</code>.</p>
+  </div>
+
+  <div class="note" style="margin-top: 20px;">
+    <p><b>Dev commands</b> are owner-only and listed for completeness. They won't
+    respond to anyone else, so there's no harm in knowing they exist.</p>
+  </div>
+
+</main>
+
+<footer class="site-foot">
+  <div class="wrap foot-grid">
+    <div class="foot-about">
+      <a class="brand" href="index.html">
+        <img src="assets/mjerg-mark-transparent-white-1024.png" alt="" width="22" height="22">
+        <span>Mjerg</span>
+      </a>
+      <p>A moderation, levelling and utility bot for Osmium communities. Built and run by one person, in the community it was written for.</p>
+    </div>
+    <div>
+      <h4>Bot</h4>
+      <ul>
+        <li><a href="commands.html">Commands</a></li>
+        <li><a href="help.html">Help &amp; setup</a></li>
+        <li><a href="info.html">Info</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Project</h4>
+      <ul>
+        <li><a href="about.html">About</a></li>
+        <li><a href="developers.html">Developers</a></li>
+        <li><a href="donate.html">Donate</a></li>
+        <li><a href="#" data-link="source">Source</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Elsewhere</h4>
+      <ul>
+        <li><a href="#" data-link="support">Support community</a></li>
+        <li><a href="#" data-link="osmium">Osmium API docs</a></li>
+        <li><a href="#" data-link="email">Email</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap foot-bottom">
+    <span>&copy; <span id="year">2026</span> Mjerg. Not affiliated with Osmium.</span>
+  </div>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/site.js"></script>
+<script src="js/commands.js"></script>
+</body>
+</html>

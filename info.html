@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Info | Mjerg</title>
+<meta name="description" content="Version, hosting, permissions and what Mjerg stores. The technical details in one place.">
+<link rel="icon" href="assets/mjerg-mark-32.png" sizes="32x32">
+<link rel="icon" href="assets/mjerg-icon-256.png" sizes="256x256">
+<link rel="apple-touch-icon" href="assets/mjerg-icon-512.png">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-head">
+  <div class="wrap head-inner">
+    <a class="brand" href="index.html">
+      <img src="assets/mjerg-mark-transparent-white-1024.png" alt="" width="26" height="26">
+      <span>Mjerg</span>
+    </a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav class="nav" id="nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="commands.html">Commands</a>
+      <a href="info.html">Info</a>
+      <a href="help.html">Help</a>
+      <a href="developers.html">Developers</a>
+      <a class="nav-cta" href="donate.html">Donate</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap section">
+
+  <p class="eyebrow">Info</p>
+  <h1>The details, without the sales pitch.</h1>
+  <p class="lede">
+    Everything a community owner tends to want to know before handing a bot
+    permission to ban people.
+  </p>
+
+  <h2 style="margin-top: 40px;">At a glance</h2>
+  <div class="table-scroll">
+    <table class="spec">
+      <tbody>
+        <tr><th>Version</th><td><span data-cfg="version">26.92</span></td></tr>
+        <tr><th>Platform</th><td>Osmium, via the public API</td></tr>
+        <tr><th>Live since</th><td>July 2026</td></tr>
+        <tr><th>Hosting</th><td>Single server, New York, United States</td></tr>
+        <tr><th>Commands</th><td>93, across 7 categories</td></tr>
+        <tr><th>Default prefix</th><td><code data-cfg="prefix">!</code>, changeable per community; mentioning the bot always works</td></tr>
+        <tr><th>Cost</th><td>Free. No paid tier, no vote locks, no premium commands</td></tr>
+        <tr><th>Maintainer</th><td><a href="developers.html">Ruby (Aubergine-UX)</a></td></tr>
+        <tr><th>Status page</th><td>None. <code class="js-prefix">!ping</code> and <code class="js-prefix">!uptime</code> are the honest answer</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2 style="margin-top: 46px;">Permissions it asks for</h2>
+  <p class="muted" style="max-width: 62ch;">
+    Mjerg requests what it needs to run every category. If you're only after part
+    of it, you can safely withhold the rest. The commands that need a missing
+    permission will say so instead of failing silently.
+  </p>
+  <div class="table-scroll" style="margin-top: 18px;">
+    <table class="spec">
+      <tbody>
+        <tr><th>Read &amp; send messages</th><td>Required. Without it, nothing works at all</td></tr>
+        <tr><th>Manage messages</th><td>Purge, pin, snipe, sticky messages, automod deletions</td></tr>
+        <tr><th>Manage roles</th><td>Auto-roles, reaction roles, level roles, <code class="js-prefix">!role</code></td></tr>
+        <tr><th>Ban &amp; kick members</th><td>Moderation commands only. Drop it if you don't want the bot able to ban</td></tr>
+        <tr><th>Manage nicknames</th><td><code class="js-prefix">!nick</code> only</td></tr>
+        <tr><th>Add reactions</th><td>Polls, reaction roles, starboard</td></tr>
+        <tr><th>View audit log</th><td><code class="js-prefix">!auditlog</code> only</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="note" style="margin-top: 20px;">
+    <p>Mjerg's own role has to sit <b>above</b> anyone it's expected to moderate.
+    This is an Osmium rule, not a Mjerg one, and it's the cause of most
+    "the bot won't ban them" reports.</p>
+  </div>
+
+  <h2 style="margin-top: 46px;">What it stores</h2>
+  <p class="muted" style="max-width: 62ch;">
+    Mjerg has to see message content to spot commands, count XP, run the counting
+    game and apply automod. Seeing is not keeping. This is what actually gets
+    written down:
+  </p>
+  <div class="table-scroll" style="margin-top: 18px;">
+    <table class="spec">
+      <tbody>
+        <tr><th>Community &amp; channel IDs</th><td>So settings can be looked up. Kept while Mjerg is in the community</td></tr>
+        <tr><th>Your settings</th><td>Prefix, channels, automod rules, triggers, tags, sticky messages</td></tr>
+        <tr><th>Moderation records</th><td>Warnings and their reasons, with who issued them and when</td></tr>
+        <tr><th>Levelling &amp; economy</th><td>XP totals and coin balances per member, per community</td></tr>
+        <tr><th>Things people asked it to keep</th><td>Quotes, tags, reminders, birthdays, AFK notes</td></tr>
+        <tr><th>Snipe cache</th><td>The most recent deleted and edited message per channel, in memory only. Gone on restart</td></tr>
+        <tr><th>Ordinary message text</th><td>Not stored</td></tr>
+        <tr><th>Voice audio</th><td>Never accessed. <code class="js-prefix">!voice</code> reads channel membership, not sound</td></tr>
+        <tr><th>Sold or shared with anyone</th><td>No. Not for ads, not for training, not for anything</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="muted small" style="margin-top: 16px;">
+    Remove Mjerg and its stored data for your community is deleted. If you want
+    that done sooner, or want a copy of what's held first,
+    <a href="#" data-link="email">email</a> works.
+  </p>
+
+  <h2 style="margin-top: 46px;">Not planned</h2>
+  <p class="muted" style="max-width: 62ch;">
+    Worth saying out loud so nobody waits on it:
+  </p>
+  <div class="panel" style="margin-top: 18px; max-width: 62ch;">
+    <ul class="muted small" style="padding-left: 1.1em; margin: 0;">
+      <li>A web dashboard</li>
+      <li>Music playback</li>
+      <li>A paid tier of any shape</li>
+      <li>Cross-community data sharing</li>
+    </ul>
+  </div>
+
+</main>
+
+<footer class="site-foot">
+  <div class="wrap foot-grid">
+    <div class="foot-about">
+      <a class="brand" href="index.html">
+        <img src="assets/mjerg-mark-transparent-white-1024.png" alt="" width="22" height="22">
+        <span>Mjerg</span>
+      </a>
+      <p>A moderation, levelling and utility bot for Osmium communities. Built and run by one person, in the community it was written for.</p>
+    </div>
+    <div>
+      <h4>Bot</h4>
+      <ul>
+        <li><a href="commands.html">Commands</a></li>
+        <li><a href="help.html">Help &amp; setup</a></li>
+        <li><a href="info.html">Info</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Project</h4>
+      <ul>
+        <li><a href="about.html">About</a></li>
+        <li><a href="developers.html">Developers</a></li>
+        <li><a href="donate.html">Donate</a></li>
+        <li><a href="#" data-link="source">Source</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Elsewhere</h4>
+      <ul>
+        <li><a href="#" data-link="support">Support community</a></li>
+        <li><a href="#" data-link="osmium">Osmium API docs</a></li>
+        <li><a href="#" data-link="email">Email</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap foot-bottom">
+    <span>&copy; <span id="year">2026</span> Mjerg. Not affiliated with Osmium.</span>
+  </div>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/site.js"></script>
+</body>
+</html>
