@@ -37,7 +37,7 @@ window.MJERG = {
     { value: "100",    label: "commands"        },
     { value: "7",      label: "categories"      },
     { value: "Jul 2026", label: "running since"  },
-    { value: "0",      label: "paid features"   }
+    { value: "98%",    label: "uptime"          }
   ],
 
   version: "26.113"
