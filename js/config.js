@@ -34,11 +34,11 @@ window.MJERG = {
   // Home page strip. Update by hand, or point it at the bot's own
   // stats endpoint later. The markup doesn't care where it comes from.
   stats: [
-    { value: "93",     label: "commands"        },
+    { value: "100",    label: "commands"        },
     { value: "7",      label: "categories"      },
     { value: "Jul 2026", label: "running since"  },
     { value: "0",      label: "paid features"   }
   ],
 
-  version: "26.92"
+  version: "26.113"
 };
