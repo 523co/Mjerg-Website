@@ -74,18 +74,28 @@
     <b>Manage community</b>.
   </p>
 
+  <div class="note" style="margin-top: 20px;">
+    <p><b>Channels and roles are given as IDs, not mentions.</b> Typing
+    <code>#mod-log</code> or <code>@Moderator</code> won't work.
+    <code class="js-prefix">!roles</code> lists every role in the community with
+    its ID next to it, and channel IDs are copied from Osmium itself &mdash;
+    open the channel's menu and copy the ID.</p>
+  </div>
+
   <ol class="steps" style="margin-top: 24px;">
     <li>
       <h3>Point the log channel somewhere</h3>
-      <p><code class="js-prefix">!channel log #mod-log</code>. Without this,
-      moderation actions still happen but nothing gets written down, which
+      <p>Copy your mod-log channel's ID out of Osmium, then
+      <code class="js-prefix">!channel log</code> followed by that ID. Without
+      this, moderation actions still happen but nothing gets written down, which
       defeats most of the point.</p>
     </li>
     <li>
       <h3>Decide who counts as a manager</h3>
-      <p><code class="js-prefix">!managerole @Moderator</code> sets which role
-      is allowed to change Mjerg's settings, separately from Osmium's own
-      permissions.</p>
+      <p>Run <code class="js-prefix">!roles</code>, find your moderator role,
+      then <code class="js-prefix">!managerole</code> with its ID. That sets
+      which role is allowed to change Mjerg's settings, separately from Osmium's
+      own permissions.</p>
     </li>
     <li>
       <h3>Turn on the automod rules you want</h3>
@@ -95,9 +105,10 @@
     </li>
     <li>
       <h3>Greet people, or don't</h3>
-      <p><code class="js-prefix">!channel welcome #general</code> plus
-      <code class="js-prefix">!autorole</code> if new members should get a role
-      on join.</p>
+      <p><code class="js-prefix">!channel welcome</code> with a channel ID, then
+      <code class="js-prefix">!welcome</code> to write the greeting itself. Add
+      <code class="js-prefix">!autorole</code> with a role ID if new members
+      should pick up a role on join.</p>
     </li>
   </ol>
 
@@ -118,6 +129,17 @@
       and send access there. Three: the command was disabled. If none of those
       apply, <code class="js-prefix">!ping</code> in a channel you know it can
       see will tell you whether it's alive at all.</p>
+    </details>
+
+    <details>
+      <summary>It won't take my #channel or @role</summary>
+      <p>It won't, and that's expected. Mjerg takes IDs for channels and roles,
+      not mentions, so <code class="js-prefix">!managerole @Moderator</code>
+      fails where the same command with the role's ID works.
+      <code class="js-prefix">!roles</code> prints every role with its ID, and
+      channel IDs come from Osmium &mdash; open the channel's menu and copy the
+      ID. Members are the exception: <code class="js-prefix">!warn</code>,
+      <code class="js-prefix">!ban</code> and the rest take a normal mention.</p>
     </details>
 
     <details>
