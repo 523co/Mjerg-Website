@@ -7,7 +7,7 @@ Static site for Mjerg, the Osmium bot.
 ```
 index.html        home
 about.html        what it is, who runs it
-commands.html     all 100 commands, searchable
+commands.html     all 103 commands, searchable
 info.html         version, hosting, permissions, what gets stored
 help.html         adding it, setup, FAQ
 developers.html   Ruby, and links for building your own Osmium bot
