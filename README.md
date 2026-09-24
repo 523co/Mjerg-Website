@@ -11,7 +11,6 @@ commands.html     all 103 commands, searchable
 info.html         version, hosting, permissions, what gets stored
 help.html         adding it, setup, FAQ
 developers.html   Ruby, and links for building your own Osmium bot
-donate.html       marked coming soon
 
 css/style.css     everything, one file
 js/config.js      <- edit this one
