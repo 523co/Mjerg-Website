@@ -3,11 +3,104 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Help &amp; setup | Mjerg</title>
-<meta name="description" content="How to add Mjerg from the Osmium app, what to configure first, and answers to the questions that come up most.">
+<title>How to Add Mjerg to Osmium: Setup Guide &amp; FAQ</title>
+<meta name="description" content="Add Mjerg from the Osmium app in a few clicks, set up the four essentials and fix common problems. Step-by-step guide plus FAQ.">
 <link rel="icon" href="assets/mjerg-mark-32.png" sizes="32x32">
 <link rel="icon" href="assets/mjerg-icon-256.png" sizes="256x256">
 <link rel="apple-touch-icon" href="assets/mjerg-icon-512.png">
+<link rel="canonical" href="https://mjerg.523r.com/help.html">
+<meta property="og:url" content="https://mjerg.523r.com/help.html">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#201e1d">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Mjerg">
+<meta property="og:title" content="How to Add Mjerg to Osmium: Setup Guide &amp; FAQ">
+<meta property="og:description" content="Add Mjerg from the Osmium app in a few clicks, set up the four essentials and fix common problems. Step-by-step guide plus FAQ.">
+<meta property="og:image" content="https://mjerg.523r.com/assets/mjerg-wordmark-dark-900x220.png">
+<meta property="og:image:alt" content="Mjerg logo">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="How to Add Mjerg to Osmium: Setup Guide &amp; FAQ">
+<meta name="twitter:description" content="Add Mjerg from the Osmium app in a few clicks, set up the four essentials and fix common problems. Step-by-step guide plus FAQ.">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "Mjerg isn't responding to anything",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Three things, in order of likelihood. One: the prefix has been changed in this community, so try @Mjerg help instead. Mentioning it always works. Two: Mjerg can't see the channel, check its role has read and send access there. Three: the command was disabled. If none of those apply, !ping in a channel you know it can see will tell you whether it's alive at all."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "It won't take my #channel or @role",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "It won't, and that's expected. Mjerg takes IDs for channels and roles, not mentions, so !managerole @Moderator fails where the same command with the role's ID works. !roles prints every role with its ID, and channel IDs come from Osmium — open the channel's menu and copy the ID. Members are the exception: !warn, !ban and the rest take a normal mention."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Can I change the prefix?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Yes, per community. The default is !. Mentioning the bot works regardless of what you set, so you can't lock yourself out."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "A moderation command says I don't have permission",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Mjerg reads permissions from your Osmium roles rather than keeping its own list. !ban needs Ban members, !purge needs Manage messages, and so on. The red tags on the commands page show which is which. If you have the permission and it still refuses, Mjerg's own role may sit below the member you're acting on."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "How do I turn off levelling, or the economy, or the games?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Individually, with !disable on the commands you don't want, or wholesale by leaving the relevant features unconfigured. Nothing switches itself back on."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Someone's XP or balance is wrong",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "!setxp and !setcoins both set values directly, and !resetlevels wipes XP for one member or for everyone. Resets aren't reversible, so double-check the argument before you send it."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Does Mjerg read our messages?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "It has to see message content to notice commands, count XP, run the counting game and apply automod rules. It doesn't store the text of ordinary messages, and nothing from your community is sold, shared or used for training. The info page lists exactly what gets written to disk."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Can I run my own copy?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Mjerg isn't open source right now. If you want to build something like it, Osmium's API docs and the official bot-example-js repo are a good place to start."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Something's broken and none of this covers it",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "The support community is the fastest route. Bug reports there usually get a look within a day or two. Include the command you ran and roughly when, it makes finding it in the logs much easier."
+   }
+  }
+ ]
+}
+</script>
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
