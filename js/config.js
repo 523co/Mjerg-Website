@@ -40,5 +40,5 @@ window.MJERG = {
     { value: "98%",    label: "uptime"          }
   ],
 
-  version: "26.122.0"
+  version: "26.124.0"
 };
