@@ -17,4 +17,10 @@ js/config.js      <- edit this one
 js/site.js        nav, active link, config injection
 js/commands.js    the command list + the search/filter on commands.html
 assets/           logo files
+scripts/prerender-commands.js   copies the command list into commands.html
 ```
+
+After editing `js/commands.js`, run `node scripts/prerender-commands.js` so
+the list in `commands.html` matches. Browsers render it from the JS either
+way; the copy in the HTML is for search engines and link previews.
+

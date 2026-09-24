@@ -24,8 +24,6 @@ window.MJERG = {
     // expires, swap in the community link on the next line instead.
     support:   "https://osm.pm/i/65YKKxgeBjixQhfs",
     community: "https://osm.pm/c/mjerg",
-    // TODO: repo link, if the source ever goes public
-    source:  "#",
     // Osmium's own developer docs
     osmium:  "https://osmium.chat/docs/api",
     email:   "mailto:mail@armd.one"

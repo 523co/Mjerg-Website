@@ -265,7 +265,7 @@ hr { border: 0; border-top: 1px solid var(--line); margin: 40px 0; }
 
 .hero { padding: 76px 0 56px; }
 .hero-mark { margin-bottom: 26px; }
-.hero h1 { max-width: 16ch; }
+.hero h1 { max-width: 20ch; }
 .hero h1 em { font-style: normal; color: var(--brand); }
 .hero .lede { margin-bottom: 26px; }
 .hero .btn-row { margin-bottom: 14px; }
