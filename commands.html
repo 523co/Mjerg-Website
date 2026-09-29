@@ -21,6 +21,9 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Mjerg Commands: All 103 Osmium Bot Commands, Searchable">
 <meta name="twitter:description" content="Every Mjerg command in one searchable list: moderation, levelling, economy, fun, utility and setup. With arguments and required permissions.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -28,7 +31,7 @@
 <header class="site-head">
   <div class="wrap head-inner">
     <a class="brand" href="index.html">
-      <img src="assets/mjerg-mark-transparent-white-64.png" alt="" width="26" height="26">
+      <img src="assets/mjerg-mark-transparent-white-64.png" alt="" width="30" height="30">
       <span>Mjerg</span>
     </a>
     <button class="nav-toggle" aria-expanded="false" aria-controls="nav">Menu</button>
@@ -39,28 +42,38 @@
       <a href="info.html">Info</a>
       <a href="help.html">Help</a>
       <a href="developers.html">Developers</a>
-      <a class="nav-cta" href="help.html#add">Add Mjerg</a>
+      <a class="nav-cta" href="help.html#add">Add to Osmium</a>
     </nav>
   </div>
 </header>
 
-<main class="wrap section">
+<main>
 
-  <p class="eyebrow">Commands</p>
-  <h1>All 103 of them.</h1>
-  <p class="lede">
-    The default prefix is <code data-cfg="prefix">!</code>, changeable per
-    community. Anything marked with a red tag needs that permission. Mjerg reads
-    it from your Osmium roles, there's no separate permission system to learn.
-  </p>
+  <div class="page-head">
+    <div class="wrap wrap--narrow">
+      <h1>Commands</h1>
+      <p class="lede">
+      The default prefix is <code data-cfg="prefix">!</code>, changeable per
+      community. Anything marked with a red tag needs that permission. Mjerg reads
+      it from your Osmium roles, there's no separate permission system to learn.
+    </p>
+    </div>
+  </div>
 
-  <div class="cmd-tools" style="margin-top: 28px;">
+  <div class="wrap section">
+
+  <div class="cmd-layout">
+  <aside class="cmd-side">
+    <div class="chips" id="cmd-chips">
+      <!-- built from CATEGORIES in js/commands.js -->
+    </div>
+  </aside>
+  <div>
+
+  <div class="cmd-tools">
     <input class="cmd-search" id="cmd-search" type="search" placeholder="Search commands..."
            autocomplete="off" spellcheck="false" aria-label="Search commands">
     <span class="small muted" id="cmd-count">103 commands</span>
-  </div>
-  <div class="chips" id="cmd-chips" style="margin-bottom: 30px;">
-    <!-- built from CATEGORIES in js/commands.js -->
   </div>
 
   <div id="cmd-list">
@@ -182,6 +195,11 @@
   <div class="note" style="margin-top: 20px;">
     <p><b>Dev commands</b> are owner-only and listed for completeness. They won't
     respond to anyone else, so there's no harm in knowing they exist.</p>
+  </div>
+
+  </div>
+  </div>
+
   </div>
 
 </main>

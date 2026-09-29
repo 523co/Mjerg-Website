@@ -39,6 +39,9 @@
  "url": "https://mjerg.523r.com/"
 }
 </script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -46,7 +49,7 @@
 <header class="site-head">
   <div class="wrap head-inner">
     <a class="brand" href="index.html">
-      <img src="assets/mjerg-mark-transparent-white-64.png" alt="" width="26" height="26">
+      <img src="assets/mjerg-mark-transparent-white-64.png" alt="" width="30" height="30">
       <span>Mjerg</span>
     </a>
     <button class="nav-toggle" aria-expanded="false" aria-controls="nav">Menu</button>
@@ -57,44 +60,299 @@
       <a href="info.html">Info</a>
       <a href="help.html">Help</a>
       <a href="developers.html">Developers</a>
-      <a class="nav-cta" href="help.html#add">Add Mjerg</a>
+      <a class="nav-cta" href="help.html#add">Add to Osmium</a>
     </nav>
   </div>
 </header>
 
 <main>
 
-  <section class="hero wrap">
-    <img class="hero-mark" src="assets/mjerg-mark-transparent-white-128.png" alt="Mjerg" width="64" height="64">
-    <h1><em>Live translation</em>, moderation and levelling for Osmium.</h1>
-    <p class="lede">
-      Moderation, levelling, an economy, games, live channel auto-translation
-      and a pile of small utilities for Osmium communities. 103 commands,
-      nothing behind a paywall, and no dashboard to sign into. You
-      configure it from chat, like everything else.
-    </p>
-    <div class="btn-row">
-      <a class="btn btn--brand" href="help.html#add">How to add Mjerg</a>
-      <a class="btn" href="commands.html">Browse all 103 commands</a>
+  <section class="wrap hero">
+    <div>
+      <h1><em>Live translation</em>, moderation and levelling for Osmium.</h1>
+      <p class="lede">
+        Moderation, levelling, an economy, games, channel auto-translation and
+        a pile of small utilities. 103 commands, nothing behind a paywall, and
+        no dashboard to sign into. You set it up from chat.
+      </p>
+      <div class="btn-row">
+        <a class="btn btn--brand btn--lg" href="help.html#add">Add to Osmium</a>
+        <a class="btn btn--lg" href="commands.html">See all commands</a>
+      </div>
+      <p class="hero-note"><b>Free.</b> Version <span data-cfg="version">26.124.0</span>.</p>
     </div>
-    <p class="hero-note">Free. Version <span data-cfg="version">26.124.0</span>.</p>
+
+    <!-- illustration: what auto-translate looks like in a channel -->
+    <div class="chat" aria-hidden="true">
+      <div class="chat-top">general</div>
+      <div class="chat-body">
+        <div class="msg">
+          <div class="msg-av av-b">L</div>
+          <div class="msg-main">
+            <span class="msg-name">Lucas</span><span class="msg-time">Today at 18:02</span>
+            <div class="msg-text">Alguém sabe a que horas começa o evento hoje?</div>
+          </div>
+        </div>
+        <div class="msg">
+          <div class="msg-av"><img src="assets/mjerg-avatar-circle-512.png" alt=""></div>
+          <div class="msg-main">
+            <span class="msg-name">Mjerg</span><span class="msg-tag">BOT</span><span class="msg-time">Today at 18:02</span>
+            <div class="msg-text">Anyone know what time the event starts today?</div>
+            <div class="msg-sub">Translated from Portuguese</div>
+          </div>
+        </div>
+        <div class="msg">
+          <div class="msg-av av-a">E</div>
+          <div class="msg-main">
+            <span class="msg-name">Emma</span><span class="msg-time">Today at 18:03</span>
+            <div class="msg-text">8pm UK time, so in about two hours!</div>
+          </div>
+        </div>
+        <div class="msg">
+          <div class="msg-av"><img src="assets/mjerg-avatar-circle-512.png" alt=""></div>
+          <div class="msg-main">
+            <span class="msg-name">Mjerg</span><span class="msg-tag">BOT</span><span class="msg-time">Today at 18:03</span>
+            <div class="msg-text">20h no horário do Reino Unido, então daqui a umas duas horas!</div>
+            <div class="msg-sub">Translated from English</div>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <section class="wrap section--tight">
-    <div class="stats" id="stats">
+  <section class="band section--tight">
+    <div class="wrap stats" id="stats">
       <!-- filled from js/config.js -->
+    </div>
+  </section>
+
+  <section class="wrap section">
+
+    <div class="feature">
+      <div>
+        <p class="eyebrow">Auto-translation</p>
+        <h2>Everyone reads the chat in their own language</h2>
+        <p>
+          Point Mjerg at a channel and it translates messages in and out of any
+          language as people post. Someone writes in Portuguese, everyone else
+          reads it in English, and the replies go back the other way. Nobody
+          has to switch to English out of politeness.
+        </p>
+        <ul class="ticks">
+          <li>Any language, both directions</li>
+          <li>Set per channel, not per community</li>
+          <li>Works on ordinary messages, no tagging</li>
+          <li><code class="js-prefix">!translate</code> for one-off lines</li>
+        </ul>
+      </div>
+      <div class="chat" aria-hidden="true">
+        <div class="chat-top">mod-chat</div>
+        <div class="chat-body">
+          <div class="msg">
+            <div class="msg-av av-c">R</div>
+            <div class="msg-main">
+              <span class="msg-name">Ruby</span><span class="msg-time">Today at 17:40</span>
+              <div class="msg-text"><code class="js-prefix">!autotranslate</code> <code>1180442915</code> <code>en</code></div>
+            </div>
+          </div>
+          <div class="msg">
+            <div class="msg-av"><img src="assets/mjerg-avatar-circle-512.png" alt=""></div>
+            <div class="msg-main">
+              <span class="msg-name">Mjerg</span><span class="msg-tag">BOT</span><span class="msg-time">Today at 17:40</span>
+              <div class="embed embed--ok">
+                <div class="embed-title">Auto-translate on</div>
+                <div class="embed-fields">
+                  <div><b>Channel</b>#general</div>
+                  <div><b>Language</b>English</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="feature feature--flip">
+      <div>
+        <p class="eyebrow">Moderation</p>
+        <h2>Moderation that keeps a record</h2>
+        <p>
+          Warnings, bans and purges all leave a trail you can look up later.
+          Automod deals with spam, invites and mass mentions before anyone has
+          to type a command, and <code class="js-prefix">!snipe</code> catches
+          whatever got deleted half a second too late.
+        </p>
+        <ul class="ticks">
+          <li>22 moderation commands</li>
+          <li>Full history with <code class="js-prefix">!modlog</code></li>
+          <li>Automod rules you switch on one at a time</li>
+          <li>Snipe and editsnipe</li>
+        </ul>
+      </div>
+      <div class="chat" aria-hidden="true">
+        <div class="chat-top">general</div>
+        <div class="chat-body">
+          <div class="msg">
+            <div class="msg-av av-c">R</div>
+            <div class="msg-main">
+              <span class="msg-name">Ruby</span><span class="msg-time">Today at 14:12</span>
+              <div class="msg-text"><code class="js-prefix">!warn</code> @sam link spam in four channels</div>
+            </div>
+          </div>
+          <div class="msg">
+            <div class="msg-av"><img src="assets/mjerg-avatar-circle-512.png" alt=""></div>
+            <div class="msg-main">
+              <span class="msg-name">Mjerg</span><span class="msg-tag">BOT</span><span class="msg-time">Today at 14:12</span>
+              <div class="embed">
+                <div class="embed-title">Warning added</div>
+                <div class="embed-fields">
+                  <div><b>Member</b>@sam</div>
+                  <div><b>Moderator</b>@Ruby</div>
+                  <div><b>Reason</b>link spam in four channels</div>
+                  <div><b>Warnings</b>2</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="feature">
+      <div>
+        <p class="eyebrow">Levelling &amp; economy</p>
+        <h2>Levels, coins and a leaderboard</h2>
+        <p>
+          XP from talking, roles that unlock at a level you pick, and a
+          leaderboard. Coins come from <code class="js-prefix">!work</code> and
+          get spent in a shop you stock yourself, or lost at
+          <code class="js-prefix">!gamble</code>. Both work out of the box and
+          both can be switched off.
+        </p>
+        <ul class="ticks">
+          <li>Level roles via <code class="js-prefix">!levelrole</code></li>
+          <li>Shop, balances and transfers</li>
+          <li>Wordle, hangman, trivia and counting</li>
+        </ul>
+      </div>
+      <div class="chat" aria-hidden="true">
+        <div class="chat-top">bot-commands</div>
+        <div class="chat-body">
+          <div class="msg">
+            <div class="msg-av av-d">N</div>
+            <div class="msg-main">
+              <span class="msg-name">Nova</span><span class="msg-time">Today at 21:15</span>
+              <div class="msg-text"><code class="js-prefix">!leaderboard</code></div>
+            </div>
+          </div>
+          <div class="msg">
+            <div class="msg-av"><img src="assets/mjerg-avatar-circle-512.png" alt=""></div>
+            <div class="msg-main">
+              <span class="msg-name">Mjerg</span><span class="msg-tag">BOT</span><span class="msg-time">Today at 21:15</span>
+              <div class="embed">
+                <div class="embed-title">Leaderboard</div>
+                <div class="lb-row"><b>1</b><div>Nova<div class="lb-bar"><i style="width: 92%"></i></div></div><small>Lvl 24</small></div>
+                <div class="lb-row"><b>2</b><div>Emma<div class="lb-bar"><i style="width: 74%"></i></div></div><small>Lvl 19</small></div>
+                <div class="lb-row"><b>3</b><div>Lucas<div class="lb-bar"><i style="width: 51%"></i></div></div><small>Lvl 13</small></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="feature feature--flip">
+      <div>
+        <p class="eyebrow">Setup</p>
+        <h2>Configured from chat, not a web panel</h2>
+        <p>
+          Log and welcome channels, auto-roles, reaction roles, sticky messages
+          and custom triggers are all set with a command.
+          <code class="js-prefix">!config</code> shows every setting on one
+          screen, so you never have to hunt for the one you changed.
+        </p>
+        <ul class="ticks">
+          <li>11 setup commands</li>
+          <li>Reaction roles and auto-roles</li>
+          <li>Sticky messages and triggers</li>
+        </ul>
+        <a class="feature-link" href="help.html">Read the setup guide &rarr;</a>
+      </div>
+      <div class="chat" aria-hidden="true">
+        <div class="chat-top">mod-chat</div>
+        <div class="chat-body">
+          <div class="msg">
+            <div class="msg-av av-c">R</div>
+            <div class="msg-main">
+              <span class="msg-name">Ruby</span><span class="msg-time">Today at 09:30</span>
+              <div class="msg-text"><code class="js-prefix">!config</code></div>
+            </div>
+          </div>
+          <div class="msg">
+            <div class="msg-av"><img src="assets/mjerg-avatar-circle-512.png" alt=""></div>
+            <div class="msg-main">
+              <span class="msg-name">Mjerg</span><span class="msg-tag">BOT</span><span class="msg-time">Today at 09:30</span>
+              <div class="embed">
+                <div class="embed-title">Settings for this community</div>
+                <div class="embed-rows">
+                  <div class="embed-row"><span>Prefix</span><span>!</span></div>
+                  <div class="embed-row"><span>Log channel</span><span>#mod-log</span></div>
+                  <div class="embed-row"><span>Welcome channel</span><span>#welcome</span></div>
+                  <div class="embed-row"><span>Automod: invites</span><span class="on">On</span></div>
+                  <div class="embed-row"><span>Levelling</span><span class="on">On</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <section class="band section">
+    <div class="wrap">
+      <div class="center">
+        <h2>103 commands, seven categories</h2>
+        <p class="lede">Utilities you'd otherwise need four bots for: reminders, weather, a calculator, dictionary and Wikipedia lookups, tags, AFK notes and more.</p>
+      </div>
+      <div class="grid grid--4" style="margin-top: 40px;">
+        <a class="tile" href="commands.html#moderation">
+          <span class="tile-icon">🛡️</span>
+          <h3>Moderation</h3>
+          <p>Warnings, bans, mutes, purges and automod.</p>
+          <small>22 commands</small>
+        </a>
+        <a class="tile" href="commands.html#fun">
+          <span class="tile-icon">🎲</span>
+          <h3>Fun</h3>
+          <p>Games, economy, polls and birthdays.</p>
+          <small>25 commands</small>
+        </a>
+        <a class="tile" href="commands.html#utility">
+          <span class="tile-icon">🔧</span>
+          <h3>Utility</h3>
+          <p>Reminders, translate, weather, tags and AFK.</p>
+          <small>20 commands</small>
+        </a>
+        <a class="tile" href="commands.html#levelling">
+          <span class="tile-icon">📈</span>
+          <h3>Levelling</h3>
+          <p>XP, ranks, level roles and the leaderboard.</p>
+          <small>8 commands</small>
+        </a>
+      </div>
+      <p class="center" style="margin-top: 32px;"><a class="btn" href="commands.html">Browse every command</a></p>
     </div>
   </section>
 
   <!-- adding it: no invite URL, it's done from inside the app -->
   <section class="wrap section" id="add">
-    <p class="eyebrow">Getting it</p>
-    <h2>Added from inside Osmium</h2>
-    <p class="muted" style="max-width: 60ch;">
-      There's no invite link to click. Osmium handles it in the app, which is
-      three steps and takes about ten seconds:
-    </p>
-    <ol class="steps" style="margin-top: 22px;">
+    <div class="center">
+      <h2>Add Mjerg in three steps</h2>
+      <p class="lede">There's no invite link. Osmium handles it inside the app, and it takes about ten seconds.</p>
+    </div>
+    <ol class="steps steps--row" style="margin-top: 40px;">
       <li>
         <h3>Open Osmium</h3>
         <p>Desktop, web or mobile, all the same.</p>
@@ -105,130 +363,18 @@
       </li>
       <li>
         <h3>Hit "Add to Chat"</h3>
-        <p>Pick the community, confirm the permissions, done. You'll need
-        <b>Manage community</b> there to be allowed to add it.</p>
+        <p>Pick the community and confirm. You'll need <b>Manage community</b> there.</p>
       </li>
     </ol>
-    <p style="margin-top: 22px;"><a href="help.html">Full setup guide, including what to configure first &rarr;</a></p>
   </section>
 
-  <section class="wrap section">
-    <p class="eyebrow">What's in it</p>
-
-    <div class="feature">
-      <div>
-        <h2>Moderation that keeps a record</h2>
-        <p class="muted">
-          Warnings, bans and purges all leave a trail you can look up later.
-          Automod handles the boring half, spam and invites and mass mentions, before
-          anyone has to type a command. And <code class="js-prefix">!snipe</code>
-          exists for when someone deletes something a half-second too late.
-        </p>
-      </div>
-      <ul>
-        <li>22 commands</li>
-        <li><code class="js-prefix">!warn</code>, <code class="js-prefix">!warnings</code>, <code class="js-prefix">!modlog</code></li>
-        <li>Automod rules you toggle individually</li>
-        <li>Snipe and editsnipe</li>
-      </ul>
-    </div>
-
-    <div class="feature feature--flag">
-      <div>
-        <p class="eyebrow">The one people stay for</p>
-        <h2>Auto-translation, running in the background</h2>
-        <p class="muted">
-          Point Mjerg at a channel and it translates messages in and out of any
-          language as people post. Someone writes in Portuguese, everyone else
-          reads it in their own language, and the replies go back the other way.
-          No copying text into a translator, no command to remember, nobody
-          switching to English out of politeness.
-        </p>
-        <p class="muted">
-          <code class="js-prefix">!autotranslate #channel es</code> turns it on
-          for a channel and the same command turns it off.
-          <code class="js-prefix">!translate</code> covers the one-off case.
-        </p>
-      </div>
-      <ul>
-        <li>Any language, both directions</li>
-        <li>Set per channel, not per community</li>
-        <li>Works on ordinary messages, no tagging</li>
-        <li>Off again with one command</li>
-      </ul>
-    </div>
-
-    <div class="feature">
-      <div>
-        <h2>Levelling and an economy people bother with</h2>
-        <p class="muted">
-          XP from talking, roles that unlock at a level you pick, a leaderboard.
-          Coins from <code class="js-prefix">!work</code>, spent in a shop you
-          stock yourself, lost at <code class="js-prefix">!gamble</code> shortly
-          after. Both work out of the box and both can be turned off.
-        </p>
-      </div>
-      <ul>
-        <li>8 levelling commands, 25 fun ones</li>
-        <li>Level roles via <code class="js-prefix">!levelrole</code></li>
-        <li>Shop, balances, transfers</li>
-        <li>Wordle, hangman, trivia, counting</li>
-      </ul>
-    </div>
-
-    <div class="feature">
-      <div>
-        <h2>Utilities you'd otherwise need four bots for</h2>
-        <p class="muted">
-          Reminders, weather, a calculator, unit conversion, dictionary and
-          Wikipedia lookups, tags, AFK, encoders and hashes.
-          None of them are impressive on their own. Together they are the reason
-          nobody has to leave the app to get something done.
-        </p>
-      </div>
-      <ul>
-        <li>20 utility commands</li>
-        <li><code class="js-prefix">!remind</code>, <code class="js-prefix">!translate</code>, <code class="js-prefix">!weather</code></li>
-        <li>Per-community tags</li>
-        <li>Per-member AFK notes</li>
-      </ul>
-    </div>
-
-    <div class="feature">
-      <div>
-        <h2>Setup that stays in chat</h2>
-        <p class="muted">
-          Nine setup commands cover the whole thing: log and welcome channels,
-          auto-roles, reaction roles, sticky messages, custom triggers.
-          <code class="js-prefix">!config</code> shows you every setting at once,
-          which beats hunting through a web panel for the one you changed.
-        </p>
-      </div>
-      <ul>
-        <li>9 setup commands</li>
-        <li>Reaction roles and auto-roles</li>
-        <li>Sticky messages and triggers</li>
-        <li>Everything visible in <code class="js-prefix">!config</code></li>
-      </ul>
-    </div>
-  </section>
-
-  <section class="wrap section--tight">
-    <div class="grid grid--3">
-      <div class="panel">
-        <h3>Just set it up?</h3>
-        <p class="muted small">The four settings worth doing on day one, and the FAQ.</p>
-        <p><a href="help.html">Help &amp; setup &rarr;</a></p>
-      </div>
-      <div class="panel">
-        <h3>Want the specifics?</h3>
-        <p class="muted small">Hosting, permissions, what Mjerg stores and for how long.</p>
-        <p><a href="info.html">Technical info &rarr;</a></p>
-      </div>
-      <div class="panel">
-        <h3>Who runs it?</h3>
-        <p class="muted small">The people behind it, and how to actually reach them.</p>
-        <p><a href="developers.html">Developers &rarr;</a></p>
+  <section class="wrap">
+    <div class="cta">
+      <h2>Ready to try it?</h2>
+      <p>Mjerg is free, set up in about five minutes, and runs in the community it was built for.</p>
+      <div class="btn-row">
+        <a class="btn btn--white btn--lg" href="help.html">Setup guide</a>
+        <a class="btn btn--ghost btn--lg" href="#" data-link="support">Join the support community</a>
       </div>
     </div>
   </section>
